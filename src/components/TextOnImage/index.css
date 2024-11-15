@@ -1,0 +1,30 @@
+.image-container {
+  position: relative;
+  /* width: 100%; */
+  /* max-width: 800px; Adjust to the desired image width */
+  /* margin: auto; */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 15%;
+  left: 14%;
+  color: #dedede;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 1;
+  letter-spacing: -0.005em;
+}
+
+.client-name {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  padding: 0;
+}

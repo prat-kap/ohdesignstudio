@@ -1,31 +1,77 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { useRef, useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import './App.css';
+import TextOnImage from './components/TextOnImage';
+import CharacterBranding from './components/CharacterBranding';
+import LandingPageBanner1 from './assets/LandingPageBanner_1.jpg';
+import LandingPageBanner2 from './assets/LandingPageBanner_2.jpg';
+import LandingPageBanner3 from './assets/LandingPageBanner_3.jpg';
+import Capabilities from './components/Capabilities';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const containerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 1; // Adjust scroll speed with multiplier
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    setIsDragging(false);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>OH! Design Studio</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div style={{ height: '100vh' }}>
+      <Container
+        fluid
+        className="horizontal-container"
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUpOrLeave}
+        onMouseLeave={handleMouseUpOrLeave}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+      >
+        <Row className="scroll-row">
+          <Col className="scroll-item">
+            <TextOnImage
+              src={LandingPageBanner1}
+              alt="Landing page banner 1- Create game changing brand"
+            />
+          </Col>
+          <Col className="scroll-item">
+            <TextOnImage
+              src={LandingPageBanner2}
+              alt="Landing page banner 2- Create game changing brand"
+            />
+          </Col>
+          <Col className="scroll-item">
+            <TextOnImage
+              src={LandingPageBanner3}
+              alt="Landing page banner 3- Create game changing brand"
+            />
+          </Col>
+          <Col className="scroll-item" style={{ backgroundColor: '#fff500' }}>
+            <CharacterBranding />
+          </Col>
+          <Col className="scroll-item" style={{ backgroundColor: '#fff500' }}>
+            <Capabilities />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
