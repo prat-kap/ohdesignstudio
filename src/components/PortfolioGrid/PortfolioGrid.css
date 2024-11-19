@@ -1,0 +1,8 @@
+.portfolio-info {
+    background-color: #F5F5F5;
+}
+
+.portfolio-image img {
+    height: 100%;
+    object-fit: cover;
+}

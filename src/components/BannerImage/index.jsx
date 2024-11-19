@@ -1,5 +1,5 @@
 import { Container, Row } from 'react-bootstrap';
-import './index.css';
+import 'src/components/BannerImage/BannerImage.css';
 
 const TextOnImage = (props) => {
   // eslint-disable-next-line react/prop-types

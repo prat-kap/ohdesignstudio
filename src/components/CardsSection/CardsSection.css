@@ -1,0 +1,51 @@
+.section-wrapper {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+   
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.scrollable-container {
+    max-height: 500px; /* Adjust height as needed */
+    overflow-y: auto; /* Enables vertical scroll */
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents items from wrapping */
+    gap: 1.5rem;
+}
+
+.card {
+    width: 300px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.card-title-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}

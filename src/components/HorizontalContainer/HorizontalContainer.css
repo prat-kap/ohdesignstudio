@@ -1,0 +1,33 @@
+.horizontal-container {
+    display: flex;
+    cursor: grab;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 2%;
+    /* user-select: none; */
+  }
+  
+  .horizontal-container:active {
+    cursor: grabbing; /* Changes cursor to grabbing icon while dragging */
+  }
+
+  .scroll-item {
+    min-width: 85%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .scroll-row {
+    display: flex;
+    flex-wrap: nowrap;
+    /* gap: 20px;
+    padding: 20px; 
+    overflow-x: auto; */
+    user-select: none;
+    height: 100%;
+  }

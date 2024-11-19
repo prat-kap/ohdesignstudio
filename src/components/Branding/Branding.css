@@ -1,0 +1,56 @@
+.character-branding{
+    height: 100%;
+    padding: 0 60px;
+}
+
+.branding-row {
+    height: 100%;
+}
+
+.text-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-section h2 {
+    font-size: 3vw;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0px;
+    color: #95999a;
+    padding-top: 15%;
+}
+
+.text-section p {
+    font-size: 1vw;
+    margin-bottom: 0px;
+    width: 75%;
+}
+
+.link-section {
+    display: inline-block;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 35px;
+}
+
+.link-section:hover {
+    color: #555;
+    border-color: #555;
+}
+
+.image-section {
+    text-align: right;
+    margin-top: 0;
+    height: 100%;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
