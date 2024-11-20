@@ -4,9 +4,9 @@ import 'src/components/Branding/Branding.css';
 
 const Branding = () => {
   return (
-    <Container fluid className='character-branding'>
+    <Container fluid className="character-branding">
       <Row className="branding-row h-100">
-        <Col xs={8} className="text-section" >
+        <Col xs={8} className="text-section">
           <h2>
             Character is a branding and design agency with studios in New York
             and San Francisco.
@@ -18,10 +18,16 @@ const Branding = () => {
             complex, consumer behavior has shifted, and we, as a company, have
             evolved with those changes along with it.
           </p>
-          <a href="#" className='link-section'>ABOUT US</a>
+          <a href="#" className="link-section">
+            ABOUT US
+          </a>
         </Col>
-        <Col xs={4} className='image-section'>
-          <img src={CharacterBrandingBanner} alt="Character Branding" className="image" />
+        <Col xs={4} className="image-section">
+          <img
+            src={CharacterBrandingBanner}
+            alt="Character Branding"
+            className="image"
+          />
         </Col>
       </Row>
     </Container>
