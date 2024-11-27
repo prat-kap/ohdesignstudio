@@ -1,35 +1,40 @@
-.clients-title {
-  font-size: 3rem;
-  font-weight: 300;
-  color: #888;
-  margin-bottom: 20px;
+.clients-section {
+  padding: 5%;
 }
 
-.scrollable-container {
-  height: 400px;
+.clients-title {
+  font-size: 3.5vw;
+  font-weight: 600;
+  color: #959999;
+  margin-bottom: 4%;
+}
+
+.scrollable-clients-container {
+  height: 50vh;
   overflow-y: auto;
-  padding-right: 10px;
+  padding-right: 2%;
 }
 
 .logos-grid {
   display: flex;
   justify-content: space-around;
-  padding-top: 20px;
+  padding-top: 1%;
 }
 
 .logos-column {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 3vh;
   align-items: center;
 }
 
 .client-logo {
-  width: 100px;
+  width: 63%;
   height: auto;
   object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.3s;
+  background: black;
 }
 
 .client-logo:hover {

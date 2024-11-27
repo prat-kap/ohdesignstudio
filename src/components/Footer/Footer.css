@@ -1,0 +1,40 @@
+.footer-row {
+  background-color: #fff500;
+  width: 85%;
+}
+
+.footer-address-col,
+.footer-services-col {
+  padding-left: 3%;
+  padding-top: 3.5%;
+}
+
+.footer-items-heading {
+  font-size: 1.2vw;
+  font-weight: 600;
+}
+
+.footer-address-text,
+.footer-phone,
+.footer-inquiry,
+.footer-careers-text,
+.footer-map,
+.footer-rights {
+  font-size: 1.2vw;
+}
+
+.footer-services-item {
+  list-style: none;
+  height: 30vh;
+  overflow-y: auto;
+  width: fit-content;
+}
+
+.footer-services-item li {
+  font-size: 1.2vw;
+}
+
+.footer-inquiry a,
+.footer-careers-text a {
+  color: #202222;
+}

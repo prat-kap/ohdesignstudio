@@ -1,27 +1,45 @@
 .capabilities {
-  height: 100%;
-  padding: 50px 60px;
+  padding: 4% 6%;
 }
 
-.lists-section ul {
+.heading-capabilities-section {
+  padding-top: 0.2%;
+}
+
+.heading-capabilities-section .capabilities-heading {
+  font-size: 1.5vw;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #959999;
+}
+
+.lists-capabilities-section .lists-capabilities-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
   list-style: none;
+  margin-bottom: 0;
 }
 
-.lists-section ul li {
-  padding-bottom: 30px;
-  font-size: 3rem;
+.lists-capabilities-section .lists-capabilities-wrapper li {
+  padding-bottom: 3%;
+  font-size: 2.5vw;
+  color: #959999;
+  line-height: 1.2;
 }
 
-.lists-section ul li span {
-  padding-right: 20px;
-  font-size: 1rem;
+.lists-capabilities-section .lists-capabilities-wrapper li:last-child {
+  padding-bottom: 0;
 }
 
-.text-section {
-  font-size: 1rem;
+.lists-capabilities-section .lists-capabilities-wrapper li span {
+  padding-right: 2%;
+  font-size: 1vw;
+  vertical-align: super;
+}
+
+.capabilities-intro {
+  font-size: 1vw;
 }

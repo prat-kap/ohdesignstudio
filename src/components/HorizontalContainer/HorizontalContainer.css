@@ -12,14 +12,18 @@
 }
 
 .scroll-item {
-  min-width: 85%;
-  height: 85vh;
+  min-width: 41%;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   padding-right: 0;
   padding-left: 0;
+}
+
+.scroll-item:last-child {
+  min-width: 90%;
 }
 
 .scroll-row {

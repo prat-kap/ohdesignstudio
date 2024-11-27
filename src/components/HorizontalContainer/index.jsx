@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useRef, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -9,7 +10,16 @@ import 'src/components/HorizontalContainer/HorizontalContainer.css';
 
 const HorizontalContainer = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { BannerImage, Branding, Capabilities, PortfolioGrid, Clients } = props;
+  const {
+    BannerImage,
+    Branding,
+    Capabilities,
+    PortfolioGrid,
+    Clients,
+    CardsSection,
+    RouterLinks,
+    Footer,
+  } = props;
 
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -37,7 +47,7 @@ const HorizontalContainer = (props) => {
   return (
     <Container
       fluid
-      className="horizontal-container"
+      className='horizontal-container'
       ref={containerRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
@@ -45,39 +55,49 @@ const HorizontalContainer = (props) => {
       onMouseLeave={handleMouseUpOrLeave}
       style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
     >
-      <Row className="scroll-row">
-        <Col className="scroll-item">
+      <Row className='scroll-row'>
+        <Col className='scroll-item'>
           <BannerImage
             src={LandingPageBanner1}
-            alt="Landing page banner 1- Create game changing brand"
+            alt='Landing page banner 1- Create game changing brand'
           />
         </Col>
-        <Col className="scroll-item">
+        <Col className='scroll-item'>
           <BannerImage
             src={LandingPageBanner2}
-            alt="Landing page banner 2- Create game changing brand"
+            alt='Landing page banner 2- Create game changing brand'
           />
         </Col>
-        <Col className="scroll-item">
+        <Col className='scroll-item'>
           <BannerImage
             src={LandingPageBanner3}
-            alt="Landing page banner 3- Create game changing brand"
+            alt='Landing page banner 3- Create game changing brand'
           />
         </Col>
-        <Col className="scroll-item" style={{ backgroundColor: '#fff500' }}>
+        <Col className='scroll-item' style={{ backgroundColor: '#fff500' }}>
           <Branding />
         </Col>
-        <Col className="scroll-item" style={{ backgroundColor: '#fff500' }}>
+        <Col className='scroll-item' style={{ backgroundColor: '#fff500' }}>
           <Capabilities />
         </Col>
-        <Col className="scroll-item">
+        <Col className='scroll-item'>
           <PortfolioGrid />
         </Col>
-        <Col className="scroll-item">
+        <Col className='scroll-item'>
           <Clients />
         </Col>
-        <Col className="scroll-item">{/* <CardsSection /> */}</Col>
-        <Col className="scroll-item">{/* <CardsSection /> */}</Col>
+        <Col className='scroll-item'>
+          <CardsSection />
+        </Col>
+        <Col className='scroll-item'>
+          <CardsSection />
+        </Col>
+        <Col className='scroll-item'>
+          <RouterLinks />
+        </Col>
+        <Col className='scroll-item'>
+          <Footer />
+        </Col>
       </Row>
     </Container>
   );

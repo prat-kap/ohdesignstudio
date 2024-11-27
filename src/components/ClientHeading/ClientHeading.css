@@ -1,0 +1,11 @@
+.client-wrapper {
+  margin: 0;
+  font-size: 2vw;
+  padding: 0;
+  line-height: 1.1;
+}
+
+.client-name {
+  margin-bottom: 2.5%;
+  font-size: 1vw;
+}

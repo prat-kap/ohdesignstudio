@@ -1,51 +1,64 @@
-.section-wrapper {
-  padding: 2rem;
-  background-color: #f9f9f9;
+.card-section-wrapper {
+  padding: 4%;
 }
 
-.section-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+.card-section-title {
+  font-size: 3.5vw;
+  font-weight: 600;
+  color: #959999;
+  margin-bottom: 1%;
 }
 
-.scrollable-container {
-  max-height: 500px; /* Adjust height as needed */
-  overflow-y: auto; /* Enables vertical scroll */
+.scrollable-card-container {
+  /* max-height: 500px; Adjust height as needed */
+  /* overflow-y: auto; Enables vertical scroll */
+  /* max-width: 700px; */
+  height: 45vh;
+  overflow-y: auto;
 }
 
 .card-grid {
+  height: 100%;
   display: flex;
   flex-wrap: nowrap; /* Prevents items from wrapping */
-  gap: 1.5rem;
+  gap: 4.5%;
 }
 
-.card {
-  width: 300px;
+.card-wrapper {
+  width: 20vw;
+  border-radius: 0;
+  padding-right: 4%;
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #9c9ea9;
   background-color: white;
 }
 
-.card-header {
+.card-heading {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  color: #888;
-  margin-bottom: 0.5rem;
+  justify-content: left;
+  align-items: start;
+  font-size: 1vw;
+  margin-bottom: 5%;
+  background-color: white;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: none;
+  color: #959999;
 }
 
-.card-title-link {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-  cursor: pointer;
+.card-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.card-title-heading {
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #959999;
 }
 
 .card-description {
-  color: #666;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+  color: #3d3e3e;
+  font-size: 1vw;
+  margin-top: 5%;
 }

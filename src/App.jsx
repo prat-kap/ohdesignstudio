@@ -7,6 +7,8 @@ import Capabilities from 'src/components/Capabilities';
 import PortfolioGrid from 'src/components/PortfolioGrid';
 import Clients from 'src/components/Clients';
 import CardsSection from 'src/components/CardsSection';
+import RouterLinks from 'src/components/RouterLinks';
+import Footer from 'src/components/Footer';
 import 'src/App.css';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         PortfolioGrid={PortfolioGrid}
         Clients={Clients}
         CardsSection={CardsSection}
+        RouterLinks={RouterLinks}
+        Footer={Footer}
       />
     </div>
   );

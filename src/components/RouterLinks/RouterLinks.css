@@ -1,0 +1,26 @@
+.router-links {
+  display: flex;
+  justify-content: center;
+}
+
+.router-links-lists .router-links-lists-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.router-links-lists .router-links-lists-wrapper .router-links-items {
+  width: fit-content;
+}
+
+.router-links-items a {
+  background-color: #fff500;
+  color: #110c0c;
+  font-size: 4.5vw;
+  font-weight: 500;
+}

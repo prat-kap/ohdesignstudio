@@ -24,27 +24,28 @@ const CardsSection = () => {
     },
   ];
   return (
-    <Container fluid className="section-wrapper h-100">
+    <Container fluid className='card-section-wrapper h-100'>
       <Row>
         <Col>
-          <h1 className="section-title">News</h1>
+          <h1 className='card-section-title'>News</h1>
         </Col>
       </Row>
       <Row>
-        <Col>
-          <div className="scrollable-container">
-            <div className="card-grid">
+        <Col xs={1}></Col>
+        <Col xs={11}>
+          <div className='scrollable-card-container'>
+            <div className='card-grid'>
               {newsData.map((item, index) => (
-                <Card key={index} className="card">
-                  <div className="card-header">
-                    <span className="card-index">{`0${index + 1}`}</span>
+                <Card key={index} className='card-wrapper'>
+                  <div className='card-heading'>
+                    <span className='card-index'>{`0${index + 1}`}</span>
                   </div>
-                  <Card.Img variant="top" src={item.image} alt="News Image" />
-                  <Card.Body>
-                    <Card.Title className="card-title-link">
+                  <Card.Img variant='top' src={item.image} alt='News Image' />
+                  <Card.Body className='card-container'>
+                    <Card.Title className='card-title-heading'>
                       {item.title}
                     </Card.Title>
-                    <Card.Text className="card-description">
+                    <Card.Text className='card-description'>
                       {item.description}
                     </Card.Text>
                   </Card.Body>
