@@ -1,0 +1,57 @@
+.career-section {
+  background-color: #f2f3f2;
+}
+
+.career-section .text-career-section {
+  padding: 6% 2% 0 4%;
+}
+
+.career-section .roles-career-section {
+  padding: 6% 4% 0 2%;
+}
+
+.career-section .image-career-section img {
+  height: 50%;
+}
+
+.career-section .career-heading {
+  font-size: 3vw;
+  color: #959999;
+}
+
+.career-section .career-subtext {
+  font-size: 1.5vw;
+  color: #212222;
+}
+
+.career-section .career-intro {
+  font-size: 1vw;
+  color: #212222;
+}
+
+.career-section .career-roles {
+  margin-bottom: 1vw;
+}
+
+.career-section .career-roles a {
+  font-size: 2.5vw;
+  color: #959999;
+}
+
+.career-section .career-roles p {
+  font-size: 1vw;
+  margin-bottom: 0.2%;
+}
+
+.career-section .link-career-section {
+  color: #212222;
+  margin-top: 15%;
+  font-size: 1.5vw;
+}
+
+.career-section .link-career-section a {
+  display: block;
+  color: #212222;
+  margin-top: 2%;
+  font-size: 1.2vw;
+}

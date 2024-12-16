@@ -2,25 +2,24 @@
 import { useRef, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import LandingPageBanner1 from 'src/assets/LandingPageBanner_1.jpg';
-import LandingPageBanner2 from 'src/assets/LandingPageBanner_2.jpg';
-import LandingPageBanner3 from 'src/assets/LandingPageBanner_3.jpg';
+// import LandingPageBanner1 from 'src/assets/LandingPageBanner_1.jpg';
+// import LandingPageBanner2 from 'src/assets/LandingPageBanner_2.jpg';
+// import LandingPageBanner3 from 'src/assets/LandingPageBanner_3.jpg';
 
 import 'src/components/HorizontalContainer/HorizontalContainer.css';
 
 const HorizontalContainer = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const {
-    BannerImage,
-    Branding,
-    Capabilities,
-    PortfolioGrid,
-    Clients,
-    CardsSection,
-    RouterLinks,
-    Footer,
-  } = props;
-
+  // const {
+  //   BannerImage,
+  //   Branding,
+  //   Capabilities,
+  //   PortfolioGrid,
+  //   Clients,
+  //   CardsSection,
+  //   RouterLinks,
+  //   Footer,
+  // } = props;
+  const { components } = props;
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -43,7 +42,7 @@ const HorizontalContainer = (props) => {
   const handleMouseUpOrLeave = () => {
     setIsDragging(false);
   };
-
+  console.log('test----', components);
   return (
     <Container
       fluid
@@ -55,7 +54,7 @@ const HorizontalContainer = (props) => {
       onMouseLeave={handleMouseUpOrLeave}
       style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
     >
-      <Row className='scroll-row'>
+      {/* <Row className='scroll-row'>
         <Col className='scroll-item'>
           <BannerImage
             src={LandingPageBanner1}
@@ -98,6 +97,18 @@ const HorizontalContainer = (props) => {
         <Col className='scroll-item'>
           <Footer />
         </Col>
+      </Row> */}
+      <Row className='scroll-row'>
+        {components.map((component) => {
+          return (
+            <Col
+              className={`scroll-item-${component.props.page}`}
+              key={component.props.id}
+            >
+              {component}
+            </Col>
+          );
+        })}
       </Row>
     </Container>
   );

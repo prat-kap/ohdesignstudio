@@ -1,0 +1,59 @@
+.contact-section {
+  background-color: #f2f3f2;
+}
+
+.contact-section .contact-section-text {
+  padding: 4% 2% 0 4%;
+}
+
+.contact-section .contact-section-footer {
+  padding: 4% 4% 0 2%;
+}
+
+.contact-section .contact-section-form {
+  padding-top: 4%;
+}
+
+.contact-section .contact-footer-items-heading {
+  font-size: 1.2vw;
+  font-weight: 600;
+  margin-bottom: 0.2vw;
+}
+
+.contact-footer-address-text,
+.contact-footer-phone,
+.contact-footer-email,
+.contact-footer-map,
+.contact-footer-careers-text {
+  font-size: 1.2vw;
+}
+
+.contact-section .contact-heading {
+  font-size: 3vw;
+  color: #959999;
+}
+
+.contact-section .contact-intro {
+  font-size: 1vw;
+  color: #4b4e4e;
+}
+
+.contact-section .contact-form .contact-form-fields {
+  margin-bottom: 1vw;
+}
+
+.contact-section .contact-form .form-label {
+  color: #212222;
+  margin-bottom: 0.2vw;
+  font-size: 1vw;
+}
+
+.contact-section .contact-form .contact-submit-btn {
+  background-color: #fff500;
+  border-color: #fff500;
+  color: #000;
+  padding: 2% 4% 1% 4%;
+  font-size: 1vw;
+  text-align: center;
+  margin-top: 1.5vw;
+}

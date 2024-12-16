@@ -8,7 +8,7 @@ const Branding = () => {
   return (
     <Container fluid className='character-branding h-100'>
       <Row className='branding-row h-100'>
-        <Col xs={8} className='text-branding-section'>
+        <Col xs={7} className='text-branding-section'>
           <h2 className='branding-heading'>
             Character is a branding and design agency with studios in New York
             and San Francisco.
@@ -24,7 +24,7 @@ const Branding = () => {
             <LinksSection title='ABOUT US' link='/about' />
           </p>
         </Col>
-        <Col xs={4} className='image-branding-section'>
+        <Col xs={5} className='image-branding-section'>
           <img
             src={CharacterBrandingBanner}
             alt='Character Branding'

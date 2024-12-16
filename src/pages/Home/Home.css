@@ -1,0 +1,14 @@
+.scroll-item-home {
+  min-width: 42%;
+  height: 74vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.scroll-item-home:last-child {
+  min-width: 92%;
+}

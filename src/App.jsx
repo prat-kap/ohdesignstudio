@@ -1,35 +1,27 @@
-// import { Routes, Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-import HorizontalContainer from 'src/components/HorizontalContainer';
-import BannerImage from 'src/components/BannerImage';
-import Branding from 'src/components/Branding';
-import Capabilities from 'src/components/Capabilities';
-import PortfolioGrid from 'src/components/PortfolioGrid';
-import Clients from 'src/components/Clients';
-import CardsSection from 'src/components/CardsSection';
-import RouterLinks from 'src/components/RouterLinks';
-import Footer from 'src/components/Footer';
+import Home from 'src/pages/Home';
+import About from 'src/pages/About';
+import Careers from 'src/pages/Careers';
+import JobDescription from 'src/pages/JobDescription';
+import JobApplicationForm from 'src/pages/JobApplicationForm';
+import Contact from 'src/pages/Contact';
 import 'src/App.css';
 
 function App() {
   return (
     <div style={{ height: '100vh', padding: '3% 0 3% 3%' }}>
-      {/* <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/careers" Component={Careers} />
-        <Route path="/contact" Component={Contact} />
-        <Route path="/about" Component={AboutUs} />
-      </Routes> */}
-      <HorizontalContainer
-        BannerImage={BannerImage}
-        Branding={Branding}
-        Capabilities={Capabilities}
-        PortfolioGrid={PortfolioGrid}
-        Clients={Clients}
-        CardsSection={CardsSection}
-        RouterLinks={RouterLinks}
-        Footer={Footer}
-      />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/careers' element={<Careers />} />
+        <Route path='/careers/:roleName' element={<JobDescription />} />
+        <Route
+          path='/careers/:roleName/:apply'
+          element={<JobApplicationForm />}
+        />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
     </div>
   );
 }
