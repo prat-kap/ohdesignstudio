@@ -26,21 +26,36 @@
 
 .lists-capabilities-section .lists-capabilities-wrapper li {
   padding-bottom: 3%;
+  padding-left: 6vw;
+  cursor: pointer;
+}
+
+.lists-capabilities-section .lists-capabilities-wrapper li .lists-title {
   font-size: 2.5vw;
   color: #959999;
   line-height: 1.2;
+  display: inline-block;
+}
+
+.lists-capabilities-section .lists-capabilities-wrapper li hr {
+  vertical-align: super;
+  width: 3vw;
+  color: #959999;
 }
 
 .lists-capabilities-section .lists-capabilities-wrapper li:last-child {
   padding-bottom: 0;
 }
 
-.lists-capabilities-section .lists-capabilities-wrapper li span {
+.lists-capabilities-section .lists-capabilities-wrapper li .lists-id {
   padding-right: 2%;
-  font-size: 1vw;
-  vertical-align: super;
+  padding-top: 1%;
+  font-size: 0.8vw;
+  vertical-align: top;
+  color: #959999;
+  display: inline-block;
 }
 
-.capabilities-intro {
+.capabilities .capabilities-intro {
   font-size: 1vw;
 }

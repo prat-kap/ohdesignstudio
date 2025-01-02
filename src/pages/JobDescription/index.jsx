@@ -10,7 +10,7 @@ const JobDescription = () => {
     <JobDescriptionSection id='jobdescription-section' page='jobdescription' />,
     <Footer id='jobdescription-footer' page='jobdescription' />,
   ];
-  return <HorizontalContainer components={components} />;
+  return <HorizontalContainer components={components} page='jobdescription' />;
 };
 
 export default JobDescription;

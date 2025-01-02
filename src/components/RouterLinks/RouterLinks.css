@@ -19,8 +19,12 @@
 }
 
 .router-links-items a {
-  background-color: #fff500;
+  /* background-color: #fff500; */
   color: #110c0c;
   font-size: 4.5vw;
   font-weight: 500;
+}
+
+.router-links-items a:hover {
+  color: #110c0c;
 }

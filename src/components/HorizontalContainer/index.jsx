@@ -1,29 +1,23 @@
 /* eslint-disable react/prop-types */
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// import LandingPageBanner1 from 'src/assets/LandingPageBanner_1.jpg';
-// import LandingPageBanner2 from 'src/assets/LandingPageBanner_2.jpg';
-// import LandingPageBanner3 from 'src/assets/LandingPageBanner_3.jpg';
+import RouterLinks from 'src/components/RouterLinks';
+import Logo from 'src/assets/logo_white.png';
+
+import { portfolioFilterLinks } from 'src/data/constants';
 
 import 'src/components/HorizontalContainer/HorizontalContainer.css';
 
 const HorizontalContainer = (props) => {
-  // const {
-  //   BannerImage,
-  //   Branding,
-  //   Capabilities,
-  //   PortfolioGrid,
-  //   Clients,
-  //   CardsSection,
-  //   RouterLinks,
-  //   Footer,
-  // } = props;
-  const { components } = props;
+  const { components, page } = props;
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [activeTab, setActiveTab] = useState('work-page');
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -42,75 +36,147 @@ const HorizontalContainer = (props) => {
   const handleMouseUpOrLeave = () => {
     setIsDragging(false);
   };
-  console.log('test----', components);
+
+  const ScrollToSection = () => {
+    const location = useLocation();
+    useEffect(() => {
+      if (location.hash) {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', inline: 'start' });
+        }
+      }
+    }, [location]);
+    return null;
+  };
+
+  const variants = {
+    hidden: { opacity: 0, x: -100, display: 'none' },
+    visible: { opacity: 1, x: 0, display: 'flex' },
+    exit: { opacity: 0, x: 100, display: 'none' },
+  };
+
   return (
-    <Container
-      fluid
-      className='horizontal-container'
-      ref={containerRef}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUpOrLeave}
-      onMouseLeave={handleMouseUpOrLeave}
-      style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-    >
-      {/* <Row className='scroll-row'>
-        <Col className='scroll-item'>
-          <BannerImage
-            src={LandingPageBanner1}
-            alt='Landing page banner 1- Create game changing brand'
-          />
-        </Col>
-        <Col className='scroll-item'>
-          <BannerImage
-            src={LandingPageBanner2}
-            alt='Landing page banner 2- Create game changing brand'
-          />
-        </Col>
-        <Col className='scroll-item'>
-          <BannerImage
-            src={LandingPageBanner3}
-            alt='Landing page banner 3- Create game changing brand'
-          />
-        </Col>
-        <Col className='scroll-item' style={{ backgroundColor: '#fff500' }}>
-          <Branding />
-        </Col>
-        <Col className='scroll-item' style={{ backgroundColor: '#fff500' }}>
-          <Capabilities />
-        </Col>
-        <Col className='scroll-item'>
-          <PortfolioGrid />
-        </Col>
-        <Col className='scroll-item'>
-          <Clients />
-        </Col>
-        <Col className='scroll-item'>
-          <CardsSection />
-        </Col>
-        <Col className='scroll-item'>
-          <CardsSection />
-        </Col>
-        <Col className='scroll-item'>
-          <RouterLinks />
-        </Col>
-        <Col className='scroll-item'>
-          <Footer />
-        </Col>
-      </Row> */}
-      <Row className='scroll-row'>
-        {components.map((component) => {
-          return (
-            <Col
-              className={`scroll-item-${component.props.page}`}
-              key={component.props.id}
+    <>
+      <ScrollToSection />
+      <Container
+        fluid
+        className='horizontal-container'
+        ref={containerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUpOrLeave}
+        onMouseLeave={handleMouseUpOrLeave}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+      >
+        <Row className='action-row'>
+          <div className='logo-wrapper'>
+            <Link to='/'>
+              <img
+                className='application-logo'
+                src={Logo}
+                alt='Oh! Design Studio Logo'
+                // onClick={() => window.scrollTo(0, 0)}
+              />
+            </Link>
+          </div>
+          {page === 'work' && (
+            <div
+              className='portfolio-filter-wrapper'
+              onClick={() => setActiveTab('fiter-page')}
             >
-              {component}
-            </Col>
-          );
-        })}
-      </Row>
-    </Container>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='16'
+                height='16'
+                fill='currentColor'
+                className='bi bi-search filter-icon'
+                viewBox='0 0 16 16'
+              >
+                <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0' />
+              </svg>
+              <span>FILTER</span>
+            </div>
+          )}
+          <div className='hamburger'>
+            <Link to='/#router-links'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='currentColor'
+                className='bi bi-list hamburger-icon'
+                viewBox='0 0 16 16'
+              >
+                <path
+                  fillRule='evenodd'
+                  d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5'
+                />
+              </svg>
+            </Link>
+          </div>
+        </Row>
+        <Row className='scroll-row'>
+          {page === 'work' ? (
+            <AnimatePresence mode='wait'>
+              {activeTab === 'work-page' && (
+                <motion.div
+                  className='scroll-item-container'
+                  key='work-page'
+                  variants={variants}
+                  initial='hidden'
+                  animate='visible'
+                  exit='exit'
+                  transition={{ duration: 0.2 }}
+                >
+                  {components.map((component) => {
+                    return (
+                      <Col
+                        className={`scroll-item-${component.props.page}`}
+                        key={component.props.id}
+                      >
+                        {component}
+                      </Col>
+                    );
+                  })}
+                </motion.div>
+              )}
+              {activeTab === 'fiter-page' && (
+                <motion.div
+                  className='scroll-item-container'
+                  key='fiter-page'
+                  variants={variants}
+                  initial='hidden'
+                  animate='visible'
+                  exit='exit'
+                  transition={{ duration: 0.2 }}
+                >
+                  <Col className='scroll-item-portfolio-filter'>
+                    <RouterLinks
+                      id='portfolio-filter'
+                      page='filter-page'
+                      data={portfolioFilterLinks}
+                      setActiveTab={setActiveTab}
+                    />
+                  </Col>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          ) : (
+            <div className='scroll-item-container'>
+              {components.map((component) => {
+                return (
+                  <Col
+                    className={`scroll-item-${component.props.page}`}
+                    key={component.props.id}
+                  >
+                    {component}
+                  </Col>
+                );
+              })}
+            </div>
+          )}
+        </Row>
+      </Container>
+    </>
   );
 };
 

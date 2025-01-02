@@ -1,39 +1,70 @@
 .card-section-wrapper {
-  padding: 4%;
+  padding: 3.5%;
 }
 
-.card-section-title {
+.card-section-wrapper .card-section-title {
   font-size: 3.5vw;
   font-weight: 600;
   color: #959999;
   margin-bottom: 1%;
 }
 
-.scrollable-card-container {
-  /* max-height: 500px; Adjust height as needed */
-  /* overflow-y: auto; Enables vertical scroll */
-  /* max-width: 700px; */
-  height: 45vh;
+.card-section-wrapper .scrollable-card-container {
+  height: 50vh;
   overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa #f5f5f5;
 }
 
-.card-grid {
+.card-section-wrapper .scrollable-card-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.card-section-wrapper .scrollable-card-container::-webkit-scrollbar {
+  width: 2px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.card-section-wrapper .scrollable-card-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: #aaa;
+}
+
+.card-section-wrapper .card-grid {
   height: 100%;
-  display: flex;
-  flex-wrap: nowrap; /* Prevents items from wrapping */
   gap: 4.5%;
+  margin: 0 auto;
 }
 
-.card-wrapper {
-  width: 20vw;
+.card-section-wrapper .card-grid .card-parent:last-child {
+  padding-bottom: 2vh;
+}
+
+.card-section-wrapper .card-wrapper {
+  width: 24vw;
   border-radius: 0;
-  padding-right: 4%;
+  padding: 4% 7%;
   border: none;
   border-right: 1px solid #9c9ea9;
   background-color: white;
 }
 
-.card-heading {
+.card-section-wrapper .card-row:nth-child(3n) .card-wrapper {
+  border-right: none;
+}
+
+.card-section-wrapper .card-wrapper hr {
+  color: #959999;
+  width: 3vw;
+  margin: 3% 2% 0px 0px;
+}
+
+.card-section-wrapper .card-heading {
   display: flex;
   justify-content: left;
   align-items: start;
@@ -46,18 +77,18 @@
   color: #959999;
 }
 
-.card-container {
+.card-section-wrapper .card-container {
   padding-left: 0;
   padding-right: 0;
 }
 
-.card-title-heading {
+.card-section-wrapper .card-title-heading {
   font-size: 1.2vw;
   font-weight: 600;
   color: #959999;
 }
 
-.card-description {
+.card-section-wrapper .card-description {
   color: #3d3e3e;
   font-size: 1vw;
   margin-top: 5%;

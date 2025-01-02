@@ -1,9 +1,11 @@
 .horizontal-container {
-  display: flex;
+  /* display: flex; */
   cursor: grab;
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 2%;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa #f5f5f5;
   /* user-select: none; */
 }
 
@@ -11,7 +13,7 @@
   cursor: grabbing; /* Changes cursor to grabbing icon while dragging */
 }
 
-.scroll-row {
+.horizontal-container .scroll-row {
   display: flex;
   flex-wrap: nowrap;
   /* gap: 20px;
@@ -19,4 +21,81 @@
     overflow-x: auto; */
   user-select: none;
   height: 100%;
+}
+
+.horizontal-container .action-row {
+  position: relative;
+  margin-bottom: 8vh;
+}
+
+.horizontal-container .scroll-row .scroll-item-container {
+  display: flex;
+}
+
+.horizontal-container .action-row .logo-wrapper {
+  position: absolute;
+  left: 40vw;
+}
+
+.horizontal-container .action-row .hamburger {
+  position: absolute;
+  left: 90vw;
+  cursor: pointer;
+}
+
+.horizontal-container .action-row .portfolio-filter-wrapper {
+  position: fixed;
+  left: 65vw;
+  cursor: pointer;
+}
+
+.horizontal-container .action-row .portfolio-filter-wrapper span {
+  padding-left: 1vw;
+  font-size: 1vw;
+}
+
+.horizontal-container .application-logo {
+  position: fixed;
+  width: 10%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  background: black;
+  cursor: pointer;
+}
+
+.horizontal-container .hamburger-icon {
+  position: fixed;
+  width: 2vw;
+  margin-top: 1vh;
+}
+
+.horizontal-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.horizontal-container::-webkit-scrollbar {
+  height: 2px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.horizontal-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: #aaa;
+}
+
+.horizontal-container .scroll-row .scroll-item-portfolio-filter {
+  width: 98vw;
+  height: 82vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  padding-right: 0;
+  padding-left: 0;
 }

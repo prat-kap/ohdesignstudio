@@ -1,6 +1,6 @@
-.scroll-item-jobapplication {
-  min-width: 86%;
-  height: 84vh;
+.scroll-item-work {
+  min-width: 95%;
+  height: 71vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,6 +9,6 @@
   padding-left: 0;
 }
 
-.scroll-item-jobapplication:last-child {
-  min-width: 92%;
+.scroll-item-work:last-child {
+  min-width: 100%;
 }

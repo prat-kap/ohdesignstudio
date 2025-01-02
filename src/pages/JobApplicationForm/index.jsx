@@ -7,10 +7,10 @@ import 'src/pages/JobApplicationForm/JobApplicationForm.css';
 
 const JobApplicationForm = () => {
   const components = [
-    <ApplicationForm id='jobdescription-section' page='jobdescription' />,
-    <Footer id='jobdescription-footer' page='jobdescription' />,
+    <ApplicationForm id='jobapplication-section' page='jobapplication' />,
+    <Footer id='jobapplication-footer' page='jobapplication' />,
   ];
-  return <HorizontalContainer components={components} />;
+  return <HorizontalContainer components={components} page='jobapplication' />;
 };
 
 export default JobApplicationForm;

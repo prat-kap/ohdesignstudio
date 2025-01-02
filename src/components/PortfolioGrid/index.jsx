@@ -50,7 +50,7 @@ const PortfolioGrid = () => {
             digital landscape change dramatically.
           </p>
           <p className='link-portfolio-section'>
-            <LinksSection title='VIEW ALL PROJECTS' link='/project' />
+            <LinksSection title='VIEW ALL PROJECTS' link='/portfolio' />
           </p>
         </Col>
       </Row>

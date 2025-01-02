@@ -15,6 +15,13 @@ import LandingPageBanner3 from 'src/assets/LandingPageBanner_3.jpg';
 
 import 'src/pages/Home/Home.css';
 
+import {
+  headings,
+  newsData,
+  thoughtsData,
+  routerLinks,
+} from 'src/data/constants';
+
 const Home = () => {
   const components = [
     <BannerImage
@@ -39,24 +46,22 @@ const Home = () => {
     <Capabilities id='home-capabilities' page='home' />,
     <PortfolioGrid id='home-portfolio' page='home' />,
     <Clients id='home-clients' page='home' />,
-    <CardsSection id='home-news' page='home' />,
-    <CardsSection id='home-thoughts' page='home' />,
-    <RouterLinks id='home-routing' page='home' />,
+    <CardsSection
+      id='home-news'
+      page='home'
+      title={headings.News}
+      data={newsData}
+    />,
+    <CardsSection
+      id='home-thoughts'
+      page='home'
+      title={headings.Thoughts}
+      data={thoughtsData}
+    />,
+    <RouterLinks id='home-routing' page='home' data={routerLinks} />,
     <Footer id='home-footer' page='home' />,
   ];
-  return (
-    // <HorizontalContainer
-    //   BannerImage={BannerImage}
-    //   Branding={Branding}
-    //   Capabilities={Capabilities}
-    //   PortfolioGrid={PortfolioGrid}
-    //   Clients={Clients}
-    //   CardsSection={CardsSection}
-    //   RouterLinks={RouterLinks}
-    //   Footer={Footer}
-    // />
-    <HorizontalContainer components={components} />
-  );
+  return <HorizontalContainer components={components} page='home' />;
 };
 
 export default Home;

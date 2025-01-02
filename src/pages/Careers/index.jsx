@@ -10,7 +10,7 @@ const Careers = () => {
     <CareerSection id='careers-roles' page='careers' />,
     <Footer id='careers-footer' page='careers' />,
   ];
-  return <HorizontalContainer components={components} />;
+  return <HorizontalContainer components={components} page='careers' />;
 };
 
 export default Careers;

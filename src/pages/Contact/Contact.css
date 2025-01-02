@@ -1,5 +1,5 @@
 .scroll-item-contact {
-  /* min-width: 42%; */
+  width: 98vw;
   height: 82vh;
   display: flex;
   align-items: center;
@@ -8,7 +8,3 @@
   padding-right: 0;
   padding-left: 0;
 }
-
-/* .scroll-item-contact:last-child {
-  min-width: 92%;
-} */

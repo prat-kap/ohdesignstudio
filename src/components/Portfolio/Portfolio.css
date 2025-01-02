@@ -1,0 +1,58 @@
+.portfolio-section-wrapper {
+  padding: 0;
+}
+
+.portfolio-section-wrapper .portfolios-inner {
+  position: relative;
+  padding: 0;
+  width: 30vw;
+}
+
+.portfolio-section-wrapper .portfolios-inner .portfolios-thumb-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 3vw;
+  padding-top: 3vw;
+  color: #fff;
+}
+
+.portfolio-section-wrapper
+  .portfolios-inner
+  .portfolios-thumb-hover
+  .thumb-title {
+  font-size: 2vw;
+  font-style: italic;
+}
+
+.portfolio-section-wrapper
+  .portfolios-inner
+  .portfolios-thumb-hover
+  .thumb-sub-title {
+  font-size: 1vw;
+}
+
+.portfolio-section-wrapper
+  .portfolios-inner
+  .portfolios-thumb-hover
+  .thumb-lists {
+  padding-top: 2vh;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1vw;
+  text-transform: capitalize;
+}
+
+.portfolio-section-wrapper .portfolios-inner .portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-section-wrapper .postfolio-list {
+  display: flex;
+  flex-wrap: nowrap;
+  width: auto;
+}

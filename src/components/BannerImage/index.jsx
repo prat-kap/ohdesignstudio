@@ -2,6 +2,8 @@ import { Container } from 'react-bootstrap';
 
 import LinksSection from 'src/components/LinksSection';
 import ClientHeading from 'src/components/ClientHeading';
+import DotIndicator from 'src/components/DotIndicator';
+
 import 'src/components/BannerImage/BannerImage.css';
 
 const BannerImage = (props) => {
@@ -13,9 +15,10 @@ const BannerImage = (props) => {
       <div className='overlay-text'>
         <ClientHeading />
         <p className='link-section'>
-          <LinksSection title='GO TO PROJECT' link='/project' />
+          <LinksSection title='GO TO PROJECT' link='/portfolio' />
         </p>
       </div>
+      <DotIndicator />
     </Container>
   );
 };

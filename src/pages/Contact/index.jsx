@@ -6,7 +6,7 @@ import 'src/pages/Contact/Contact.css';
 
 const Contact = () => {
   const components = [<ContactSection id='contact-page' page='contact' />];
-  return <HorizontalContainer components={components} />;
+  return <HorizontalContainer components={components} page='contact' />;
 };
 
 export default Contact;

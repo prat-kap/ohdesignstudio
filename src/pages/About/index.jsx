@@ -14,19 +14,7 @@ const About = () => {
     <Clients id='home-clients' page='about' />,
     <Footer id='home-footer' page='about' />,
   ];
-  return (
-    // <HorizontalContainer
-    //   BannerImage={BannerImage}
-    //   Branding={Branding}
-    //   Capabilities={Capabilities}
-    //   PortfolioGrid={PortfolioGrid}
-    //   Clients={Clients}
-    //   CardsSection={CardsSection}
-    //   RouterLinks={RouterLinks}
-    //   Footer={Footer}
-    // />
-    <HorizontalContainer components={components} />
-  );
+  return <HorizontalContainer components={components} page='about' />;
 };
 
 export default About;

@@ -1,29 +1,38 @@
+/* eslint-disable react/prop-types */
 import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 import LinksSection from 'src/components/LinksSection';
 import 'src/components/RouterLinks/RouterLinks.css';
 
-const RouterLinks = () => {
+const RouterLinks = (props) => {
+  const { data, page, setActiveTab } = props;
   return (
-    <Container fluid className='router-links h-100'>
+    <Container fluid className='router-links h-100' id='router-links'>
       <Row className='router-links-row h-100'>
         <Col className='router-links-lists'>
           <ul className='router-links-lists-wrapper'>
-            <li className='router-links-items'>
-              <LinksSection title='Us.' link='/about' />
-            </li>
-            <li className='router-links-items'>
-              <LinksSection title='Work.' link='/project' />
-            </li>
-            <li className='router-links-items'>
-              <LinksSection title='Thoughts.' link='/thoughts' />
-            </li>
-            <li className='router-links-items'>
-              <LinksSection title='Careers.' link='/careers' />
-            </li>
-            <li className='router-links-items'>
-              <LinksSection title='Contact.' link='/contact' />
-            </li>
+            {data.map(({ id, title, link }) => (
+              <motion.li
+                className='router-links-items'
+                key={id}
+                whileHover={{
+                  backgroundColor: '#fff500',
+                  scale: 1.1,
+                  originX: 0,
+                }}
+                transition={{
+                  type: 'tween',
+                  stiffness: 300,
+                  ease: 'easeInOut',
+                }}
+                onClick={() =>
+                  page === 'filter-page' ? setActiveTab('work-page') : null
+                }
+              >
+                <LinksSection title={title} link={link} arrow='false' />
+              </motion.li>
+            ))}
           </ul>
         </Col>
       </Row>
