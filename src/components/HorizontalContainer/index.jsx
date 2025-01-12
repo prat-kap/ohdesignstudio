@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import BreadCrumb from 'src/components/BreadCrumb';
 import RouterLinks from 'src/components/RouterLinks';
 import Logo from 'src/assets/logo_white.png';
 
@@ -174,6 +175,9 @@ const HorizontalContainer = (props) => {
               })}
             </div>
           )}
+        </Row>
+        <Row className='breadcrumb-row'>
+          <BreadCrumb />
         </Row>
       </Container>
     </>

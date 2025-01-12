@@ -13,6 +13,7 @@ import NewtechThumb from 'src/assets/newtech_thumb.jpg';
 export const headings = {
   News: 'News',
   Thoughts: 'Thoughts',
+  Reviews: 'Reviews',
   Address: 'Address',
   Phone: 'Phone',
   Inquiries: 'Inquiries',
@@ -562,5 +563,36 @@ export const portfolios = [
       listsContent: ['BROCHURE'],
       bgColor: '#cbe3ef',
     },
+  },
+];
+
+export const reviewsData = [
+  {
+    id: '01',
+    review:
+      'As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.',
+    author: 'SUSAN ANN SMITH',
+    company: 'NESTLE UK',
+  },
+  {
+    id: '02',
+    review:
+      'As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.',
+    author: 'SUSAN ANN SMITH',
+    company: 'NESTLE UK',
+  },
+  {
+    id: '03',
+    review:
+      'As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.',
+    author: 'SUSAN ANN SMITH',
+    company: 'NESTLE UK',
+  },
+  {
+    id: '04',
+    review:
+      'As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.As technology advances, so does the way we approach branding and design, impacting how brands engage with audiences.',
+    author: 'SUSAN ANN SMITH',
+    company: 'NESTLE UK',
   },
 ];

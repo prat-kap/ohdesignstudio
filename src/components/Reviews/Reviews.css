@@ -1,0 +1,104 @@
+.review-section-wrapper {
+  padding: 3.5%;
+}
+
+.review-section-wrapper .review-section-title {
+  font-size: 3.5vw;
+  font-weight: 600;
+  color: #959999;
+  margin-bottom: 1%;
+}
+
+.review-section-wrapper .scrollable-card-container {
+  height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa #f5f5f5;
+}
+
+.review-section-wrapper .scrollable-card-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.review-section-wrapper .scrollable-card-container::-webkit-scrollbar {
+  width: 2px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.review-section-wrapper .scrollable-card-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: #aaa;
+}
+
+.review-section-wrapper .card-grid {
+  height: 100%;
+  gap: 4.5%;
+  margin: 0 auto;
+}
+
+.review-section-wrapper .card-grid .card-parent:last-child {
+  padding-bottom: 2vh;
+}
+
+.review-section-wrapper .card-wrapper {
+  border-radius: 0;
+  padding: 2% 7%;
+  border: none;
+  background-color: white;
+}
+
+.review-section-wrapper .card-wrapper hr {
+  color: #959999;
+  width: 3vw;
+  margin: 1% 2% 0px 0px;
+}
+
+.review-section-wrapper .card-heading {
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  font-size: 1vw;
+  background-color: white;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: none;
+  color: #959999;
+}
+
+.review-section-wrapper .card-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.review-section-wrapper .card-title-heading {
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #959999;
+}
+
+.review-section-wrapper .card-description {
+  color: #3d3e3e;
+  font-size: 1vw;
+}
+
+.review-section-wrapper .card-description .review-author-name {
+  margin-top: 2%;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.review-section-wrapper .card-description .review-company-name {
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.review-section-wrapper .card-wrapper .link-arrow {
+  width: auto;
+  color: #3d3e3e;
+}

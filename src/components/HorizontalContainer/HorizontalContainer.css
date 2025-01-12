@@ -25,7 +25,7 @@
 
 .horizontal-container .action-row {
   position: relative;
-  margin-bottom: 8vh;
+  height: 8vh;
 }
 
 .horizontal-container .scroll-row .scroll-item-container {
@@ -41,12 +41,14 @@
   position: absolute;
   left: 90vw;
   cursor: pointer;
+  padding-top: 1vh;
 }
 
 .horizontal-container .action-row .portfolio-filter-wrapper {
   position: fixed;
   left: 65vw;
   cursor: pointer;
+  padding-top: 1.2vh;
 }
 
 .horizontal-container .action-row .portfolio-filter-wrapper span {
@@ -68,7 +70,7 @@
 .horizontal-container .hamburger-icon {
   position: fixed;
   width: 2vw;
-  margin-top: 1vh;
+  color: black;
 }
 
 .horizontal-container::-webkit-scrollbar-track {
@@ -98,4 +100,12 @@
   font-size: 1.5vw;
   padding-right: 0;
   padding-left: 0;
+}
+
+.horizontal-container .breadcrumb-row {
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 1vw;
+  position: fixed;
+  left: 62vw;
 }

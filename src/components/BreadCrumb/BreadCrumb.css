@@ -1,0 +1,13 @@
+.breadcrumbContainer {
+  list-style: none;
+}
+
+.breadcrumbContainer .breadcrumb-links {
+  text-transform: capitalize;
+  padding: 0 0.2vw 0 0;
+}
+
+.breadcrumbContainer .breadcrumb-links .breadcrumbArrow {
+  width: 1vw;
+  height: 1.5vh;
+}

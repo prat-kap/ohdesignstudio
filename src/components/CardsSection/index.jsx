@@ -2,6 +2,7 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
+import LinksSection from 'src/components/LinksSection';
 import 'src/components/CardsSection/CardsSection.css';
 
 const lineMotion = {
@@ -88,6 +89,7 @@ const CardsSection = (props) => {
                                 <Card.Text className='card-description'>
                                   {cardItem.description}
                                 </Card.Text>
+                                <LinksSection title='' link='' />
                               </Card.Body>
                             </Card>
                           </motion.div>

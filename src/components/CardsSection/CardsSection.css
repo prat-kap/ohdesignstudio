@@ -93,3 +93,8 @@
   font-size: 1vw;
   margin-top: 5%;
 }
+
+.card-section-wrapper .card-wrapper .link-arrow {
+  width: auto;
+  color: #3d3e3e;
+}

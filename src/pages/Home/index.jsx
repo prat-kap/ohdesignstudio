@@ -5,6 +5,7 @@ import Branding from 'src/components/Branding';
 import Capabilities from 'src/components/Capabilities';
 import PortfolioGrid from 'src/components/PortfolioGrid';
 import Clients from 'src/components/Clients';
+import Reviews from 'src/components/Reviews';
 import CardsSection from 'src/components/CardsSection';
 import RouterLinks from 'src/components/RouterLinks';
 import Footer from 'src/components/Footer';
@@ -20,6 +21,7 @@ import {
   newsData,
   thoughtsData,
   routerLinks,
+  reviewsData,
 } from 'src/data/constants';
 
 const Home = () => {
@@ -46,6 +48,12 @@ const Home = () => {
     <Capabilities id='home-capabilities' page='home' />,
     <PortfolioGrid id='home-portfolio' page='home' />,
     <Clients id='home-clients' page='home' />,
+    <Reviews
+      id='home-reviews'
+      page='home'
+      title={headings.Reviews}
+      data={reviewsData}
+    />,
     <CardsSection
       id='home-news'
       page='home'
